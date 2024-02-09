@@ -1,0 +1,119 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.box {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #676972;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+
+  /* Animation */
+  animation: float 3s ease-in-out infinite alternate; /* Apply animation */
+}
+
+/* Animation keyframes */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px); /* Adjust translateY for desired animation */
+  }
+}
+
+/* Additional styling for child elements */
+.box > * {
+  margin: 10px; /* Add margin between child elements */
+}
+
+.input1,
+.input2 {
+  height: 50px;
+  width: 80%;
+  padding-left: 10px;
+  padding-right: 10px;
+  vertical-align: center;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: #e5e5e5;
+  color: #121212;
+}
+
+.input2 {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.buttondiv {
+  width: 80%;
+}
+
+.button,
+.liqbtn {
+  width: 90px;
+  height: 35px;
+  background-color: #dc843d;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.liqbtn {
+  background-color: #086a94df;
+  margin-left: 10px;
+  width: 100px;
+}
+
+.head {
+  width: 100%;
+  height: 50px;
+  background-color: #7077a1;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  position: fixed;
+}
+
+.heading {
+  letter-spacing: 2px;
+}
+
+@keyframes spinner {
+  0% {
+    transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0) rotate(360deg);
+  }
+}
+
+.spinner {
+  animation: 1.5s linear infinite spinner;
+  animation-play-state: inherit;
+  border: solid 5px #e8c872;
+  border-bottom-color: #424769;
+  border-radius: 50%;
+  content: "";
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate3d(-50%, -50%, 0);
+  will-change: transform;
+}
