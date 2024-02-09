@@ -163,7 +163,7 @@ export default function Home() {
     <>
      
       <div className={styles.head}>
-            <h2 className={styles.heading}>SANDYSWAP : {contractAddress} </h2>
+            <h2 className={styles.heading}>Token Address  : {contractAddress} </h2>
       </div>
       <Form
         token={token}
